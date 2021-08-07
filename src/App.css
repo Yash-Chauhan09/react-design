@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: linear-gradient(to right, #fc787f, #ff8664);
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
+  width: 1300px;
+  margin: 58px auto 0 auto;
+  background-color: #fff;
+}
+.app__hero {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./assets/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.app__heroContainer {
+  width: 500px;
+  height: 38vh;
+  color: #fff;
+  background-color: #42477e75;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 2.8rem 3rem;
+}
+.app__heroContainer > h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.app__heroContainer > p {
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+.app__cards {
+  background-color: #f4f8fd;
+  padding: 4rem 2rem 2rem 2rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1400px) {
+  .app {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 500px) {
+  .app__heroContainer {
+    width: 340px;
+    padding: 2.8rem 1rem;
   }
 }
